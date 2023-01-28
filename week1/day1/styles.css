@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding-top: 50px;
+}
+
+nav {
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+main {
+    width: 500px;
+    height: 300px;
+}
+
+main>span {
+    display: block;
+    float: left;
+    width: calc((100% / 3));
+    height: 100%;
+    background-color: bisque;
+}
+
+main>span.bleu {
+    background-color: blue;
+}
+
+main>span.blanc {
+    background-color: white;
+}
+
+main>span.rouge {
+    background-color: red;
+}
+
+body>div:first-of-type li {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+body>div:first-of-type li:nth-of-type(2) {
+    background-color: blue;
+}
+
+body>div:nth-of-type(2) p:first-of-type {
+    background-color: pink;
+    color: white;
+}
+
+body>div:nth-of-type(2) p:nth-of-type(2) {
+    background-color: lightblue;
+    padding: 50px;
+    margin: 20px 30px;
+}
+
+
+
+/* 
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 10px 50px;
+    border: 20px solid purple;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1>i {
+    color: brown;
+}
+
+p {
+    text-decoration: underline;
+}
+
+.blue-element {
+    color: blue;
+}
+
+.fat-text {
+    font-weight: bolder;
+}
+
+#btm {
+    color: red;
+    visibility: hidden;
+}
+
+.square {
+    width: 50vw;
+    height: 30%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-image: url("lion.png");
+}
+
+.the-span {
+    display: block;
+}
+
+.the-span+span {
+    color: brown;
+} */

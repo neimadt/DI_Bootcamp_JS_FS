@@ -1,0 +1,48 @@
+h1 {
+    text-transform: capitalize;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+}
+
+.left-padded {
+    padding-left: 40px;
+}
+
+img {
+    display: block;
+    max-width: calc(100% - 16px);
+    height: auto;
+    padding: 4px;
+    border: 8px solid orange;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.cell-bordered {
+    border: 1px solid gray;
+}
+
+.cell-bottom-margin {
+    padding-bottom: 20px;
+}
+
+.cell-red {
+    color: red;
+    border-color: red;
+}
+
+.cell-padded {
+    padding: 3px;
+}
+
+.cell-half {
+    width: 50%;
+}

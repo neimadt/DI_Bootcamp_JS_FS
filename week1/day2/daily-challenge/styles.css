@@ -108,3 +108,22 @@ section button {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+img {
+    width: 100%;
+}
+
+.hero-container {
+    position: relative;
+}
+
+.message {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: white;
+}
+
+.message h1 {
+    margin: 0;
+}

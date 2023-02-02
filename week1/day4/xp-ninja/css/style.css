@@ -1,0 +1,36 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.col-left,
+.col-right {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.col-right {
+    background: linear-gradient(135deg, #000000 0%, #a3007d 40%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0 20px;
+    width: calc(50% - 40px);
+}
+
+.col-right svg {
+    width: 80px;
+    height: auto;
+}
+
+.col-right h1 {
+    margin: 0;
+}

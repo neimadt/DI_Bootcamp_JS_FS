@@ -1,0 +1,129 @@
+:root {
+    --left-col-bg: #dcdcdc;
+    --very-dark-gray: #474747;
+    --left-col-width: 250px;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-left: var(--left-col-width);
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.separator {
+    border-bottom: 2px solid var(--very-dark-gray);
+    padding-bottom: 25px;
+    margin: 0 20px;
+}
+
+.separator.no-margin {
+    margin: 0;
+}
+
+.main-col-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--left-col-width);
+    color: var(--very-dark-gray);
+    background-color: var(--left-col-bg);
+    padding-bottom: 30px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.main-col-left img {
+    display: block;
+    border-radius: 50%;
+    height: 150px;
+    width: auto;
+    margin: 50px auto 0 auto;
+    /* box-shadow: 0 0 0 2px var(--very-dark-gray); */
+    border: 2px solid var(--very-dark-gray);
+    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.25);
+
+}
+
+.main-col-left h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-col-left h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.main-col-left p {
+    text-align: center;
+}
+
+.main-col-left .icon-container {
+    width: 100%;
+    margin: 30px auto 0 auto;
+}
+
+.main-col-left .icon-container svg {
+    display: block;
+    width: 40px;
+    margin: 0 auto;
+}
+
+.main-col-left .icon-container a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-decoration: none;
+    color: var(--very-dark-gray);
+}
+
+.main-col-left .icon-container a span {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.main-col-right {
+    width: calc(100% - 40px);
+    min-height: 100%;
+    padding: 0 20px 20px 20px;
+}
+
+.main-col-right h2 {
+    margin-top: 30px !important;
+    font-size: 30px;
+}
+
+.main-col-right h3 {
+    font-size: 18px;
+}
+
+.main-col-right .skills-container {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.main-col-right .skills-container .skill-container {
+    width: 50%;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.main-col-right .skills-container ul {
+    padding: 0 0 0 30px;
+    margin: 0 auto;
+}

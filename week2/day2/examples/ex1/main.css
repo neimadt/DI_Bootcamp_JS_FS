@@ -1,0 +1,29 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 80px;
+    gap: 5px;
+}
+
+main>div {
+    border-radius: 8px;
+    background-color: yellow;
+}
+
+@media screen and (min-width: 512px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 736px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

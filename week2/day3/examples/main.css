@@ -1,0 +1,31 @@
+.box {
+    min-height: 50px;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+
+.box.yellow-box {
+    background-color: lightyellow;
+}
+
+.box.red-box {
+    background-color: lightcoral;
+}
+
+.box.blue-box {
+    background-color: lightskyblue;
+}
+
+.box.green-box {
+    background-color: lightgreen;
+}
+
+.box.salmon-box {
+    background-color: lightsalmon;
+}
+
+section {
+    margin-top: 50px;
+    border: 2px solid gray;
+    padding: 10px 8px;
+}

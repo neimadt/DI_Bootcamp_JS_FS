@@ -59,7 +59,7 @@ main .notes {
     }
 }
 
-main .notes b {
+main>.notes>b {
     font-size: 1.75rem;
 }
 

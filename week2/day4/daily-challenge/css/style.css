@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 30px 0 0 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-gray {
+    background-color: rgb(245, 245, 245);
+    box-shadow: 6px 8px 7px -5px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+    font-size: 20px;
+}
+
+.card ul li {
+    color: blue;
+    font-weight: bold;
+}
+
+.veg-table table {
+    text-align: center;
+}
+
+.veggie-imgs img {
+    width: 100%;
+    height: auto;
+}
+
+.veggie-imgs .border {
+    padding: 1px;
+}
+
+.my-quote {
+    padding-left: 15px;
+    position: relative;
+}
+
+.my-quote::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 6px;
+    background-color: rgb(225, 225, 225);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.seperator {
+    height: 20px;
+}
+
+.veggie-img {
+    margin: 0 auto 8px auto;
+    width: 400px;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .veggie-img {
+        margin: 0;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .seperator {
+        display: none;
+    }
+}

@@ -1,0 +1,24 @@
+.btn-submit {
+    white-space: nowrap;
+}
+
+.btn-hover {
+    width: 80px;
+    height: 35px;
+    margin: 30px auto;
+    display: block;
+    transition: transform ease-in-out 500ms, background-color ease-in-out 5000ms;
+}
+
+/* .btn-hover:hover {
+    transform: scale(2);
+    background-color: red;
+} */
+
+.btn-hover:focus {
+    border: 2px solid pink;
+}
+
+.btn-hover:active {
+    background-color: purple !important;
+}

@@ -1,0 +1,28 @@
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+main button {
+    width: 25vw;
+    height: 10vh;
+    border: none;
+    outline: transparent;
+    background-color: darkgray;
+    color: white;
+    transition: background-color ease-in-out 200ms, border ease-in-out 200ms, transform ease-in-out 500ms;
+}
+
+main button:hover {
+    background-color: gray;
+}
+
+main button:focus {
+    border: 2px solid black;
+}
+
+main button:active {
+    transform: scale(0.75);
+}

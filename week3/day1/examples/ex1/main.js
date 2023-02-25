@@ -1,15 +1,24 @@
-let n1 = 1, n2 = 2;
-let s1 = '1', s2 = '2';
+let arr = [10, 20, 30];
 
-console.log(n1 == s1)
-console.log(n1 === s1)
-console.log(n1 != n2)
-console.log(n1 != s1)
-console.log(n1 !== s1)
+arr.splice(0, 0, '789');
+console.log(arr);
+console.log(arr.length);
 
+arr.splice(arr.length, 0, '111');
+// arr.push('222');
+console.log(arr);
 
-console.log(n1 <= n2)
+arr.splice(2, 0, 'Damien', 'Toulet', 'DDDD');
+console.log(arr);
 
-let b1 = true, b2 = false;
-console.log(b1 && b2)
-console.log(b1 || b2)
+arr.splice(0, 1);
+console.log(arr);
+
+arr.splice(1, 3);
+console.log(arr);
+
+arr.splice((arr.length - 1), 1);
+console.log(arr);
+
+arr.splice((arr.length - 1), 1);
+console.log(arr);

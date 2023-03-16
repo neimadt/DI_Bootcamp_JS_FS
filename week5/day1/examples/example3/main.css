@@ -1,0 +1,14 @@
+.red-square {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: 1px solid black;
+}
+
+.yellow-circle {
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    border: 1px solid black;
+}

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <style>
+        input:valid {}
+
+        :not(input:valid) {}
+    </style>
+</head>
+
+<body>
+    <table id="tb">
+        <tbody>
+            <tr>
+                <td>Your age:</td>
+
+                <td>
+                    <label>
+                        <input type="radio" name="age" value="young" checked> less than 18
+                    </label>
+                    <label>
+                        <input type="radio" name="age" value="mature" checked> from 18 to 50
+                    </label>
+                    <label>
+                        <input type="checkbox" name="age" value="senior"> more than 60
+                    </label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let inputs = tb.getElementsByTagName('input');
+
+        for (let input of inputs) {
+            alert(input.value + ': ' + input.checked);
+        }
+    </script>
+</body>
+
+</html>

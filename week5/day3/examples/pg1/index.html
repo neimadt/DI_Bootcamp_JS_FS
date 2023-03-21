@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <button id="btn1" type="button" name="test" onclick="inform()">
+            Click me
+        </button>
+    </form>
+
+    <form>
+        <button id="btn2" type="button" name="test">
+            Click me
+        </button>
+    </form>
+
+    <form>
+        <button id="btn3" type="button" name="test">
+            Click me
+        </button>
+    </form>
+
+    <script>
+        function inform() {
+            alert("You clicked me")
+        }
+
+        const btn2 = document.querySelector('#btn2');
+        btn2.onclick = () => {
+            alert('Click!');
+        };
+        btn2.onmouseover = () => {
+            console.log('Over!');
+        };
+        btn2.onmouseout = () => {
+            console.log('Out!');
+        };
+
+        const btn3 = document.querySelector('#btn3');
+
+        const onBtn3Click = () => {
+            alert('You Clicked?!?');
+            btn3.removeEventListener('click', onBtn3Click);
+        }
+
+        btn3.addEventListener('click', onBtn3Click);
+        btn3.addEventListener('mouseover', () => console.log('Btn3 over'));
+        btn3.addEventListener('mouseout', () => console.log('Btn3 out'));
+    </script>
+</body>
+
+</html>

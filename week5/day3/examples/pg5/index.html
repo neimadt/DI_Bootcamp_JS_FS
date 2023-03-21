@@ -1,0 +1,45 @@
+<html>
+
+<body>
+    <form name="my">
+        <input name="one" value="1">
+        <input name="two" value="2">
+    </form>
+
+    <script>
+        // get the form
+        let form1 = document.forms.my;
+        let form2 = document.forms[0]; // the first form on the page
+
+
+        console.log(document.forms.length)
+
+        let inputOne = form1.elements.one; // <input name='one' value='1'>
+        let inputTwo = form1.elements.two; // <input name='one' value='1'>
+        let elem2 = form2.elements[0]; // <input name='one' value='1'>
+
+        console.log({
+            form1,
+            form2,
+            inputOne,
+            elem2,
+            inputTwo,
+            elements: form1.elements
+        }) // "my"
+
+        setTimeout(() => {
+
+            inputOne.value += 'ONE';
+        }, 2000);
+
+        inputTwo.addEventListener('change', e => {
+            console.log('NEw CHANGED Value', e.currentTarget.value)
+        });
+
+        inputTwo.addEventListener('input', e => {
+            console.log('NEw Value', e.currentTarget.value)
+        });
+    </script>
+</body>
+
+</html>

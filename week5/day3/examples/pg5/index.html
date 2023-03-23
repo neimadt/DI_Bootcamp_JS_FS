@@ -4,13 +4,35 @@
     <form name="my">
         <input name="one" value="1">
         <input name="two" value="2">
+        <input id="three" value="3">
+
+        <button type="button">
+            <i>Submit</i>
+        </button>
     </form>
 
     <script>
         // get the form
         let form1 = document.forms.my;
-        let form2 = document.forms[0]; // the first form on the page
+        let form2 = document.forms[0];
 
+        const frm = document.querySelector('form');
+
+        const {
+            forms: {
+                my: {
+                    elements: {
+                        one,
+                        two,
+                        three
+                    }
+                }
+            }
+        } = document;
+        // const one = document.forms.my.elements.one;
+        // const two = document.forms.my.elements.two;
+        // const three = document.forms.my.elements.three;
+        debugger;
 
         console.log(document.forms.length)
 

@@ -6,7 +6,7 @@ const onClick = (e) => {
     // const btn = e.target;
     // const type = e.type;
 
-    alert(`Button "${btn.innerHTML}" Clicked! ${type}`)
+    alert(`Button "${btn.innerHTML}" Clicked! Event Type: ${type}`)
 };
 
 console.log(btns);

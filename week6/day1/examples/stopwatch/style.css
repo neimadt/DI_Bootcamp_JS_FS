@@ -1,0 +1,14 @@
+.count-up {
+    height: 60px;
+    background-color: purple;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnKillInterval {
+    margin-top: 30px;
+}

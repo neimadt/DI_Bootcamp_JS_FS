@@ -2,72 +2,108 @@
 const { forms: { libform: frm } } = document;
 // const frm = document.forms.libform;
 
+const handleSuccessOrError = frmCtrl => {
+
+    let success = null, error = null;
+
+    const inputElement = frmCtrl.querySelector('input');
+    const errorSpanElement = frmCtrl.querySelector('.alert');
+
+    errorSpanElement.classList.add('hidden');
+
+    const { value, name } = inputElement;
+    // const value = inputElement.value;
+    // const name = inputElement.name;
+
+    if (value) {
+
+        success = value;
+    }
+    else {
+
+        error = name;
+        errorSpanElement.classList.remove('hidden');
+    }
+
+
+    const result = {
+        success,
+        error
+    };
+
+    return result;
+};
+
 const onSubmit = event => {
 
     event.preventDefault();
 
-    // const frmData = new FormData(frm);
-    // const fdata = Object.fromEntrie Gs(frmData);
+    const allErrors = [], allSuccess = [];
 
-    const inputNoun = frm.noun;
-    const inputAdjective = frm.adjective;
-    const inputPerson = frm.person;
+    const frmCtrls = frm.querySelectorAll('.form-control');
 
-    const success = [], errorsFound = [];
+    for (const frmCtrl of frmCtrls) {
 
-    if (inputNoun.value) {
+        const { success, error } = handleSuccessOrError(frmCtrl);
 
-        // const alertSpan = document.querySelector('.alert.alert-noun');
-        // alertSpan.classList.add('hidden');
+        if (success) {
 
-        success.push(inputNoun.value);
+            allSuccess.push(success);
+        }
+        else if (error) {
+
+            allErrors.push(error);
+        }
+    }
+
+
+    let sentence;
+
+    const resultElement = document.querySelector('#story');
+
+    if (allErrors.length > 0) {
+
+        // const errorSentence = allErrors.join(', ');
+
+        // alert(`${errorSentence} missing...`);
+        // return;
+
+        // sentence = `<b class="alert">${allErrors.join(', ')} missing...</b>`;
+        sentence = `${allErrors.join(', ')} missing...`;
+
+        resultElement.classList.add('alert');
     }
     else {
 
-        // const alertSpan = document.querySelector('.alert.alert-noun');
-        // alertSpan.classList.remove('hidden');
-
-        errorsFound.push('Noun');
+        sentence = allSuccess.join(' ');
+        resultElement.classList.remove('alert');
     }
 
-    if (inputAdjective.value) {
-
-        success.push(inputAdjective.value);
-    }
-    else {
-
-        errorsFound.push('Adjective');
-    }
-
-    if (inputPerson.value) {
-
-        success.push(inputPerson.value);
-    }
-    else {
-
-        errorsFound.push('Someone\'s Name');
-    }
-
-    if (errorsFound.length > 0) {
-
-        const sentence = errorsFound.join(', ');
-
-        alert(`${sentence} missing.`);
-        return;
-    };
-
-    const sentence = success.join(' ');
-
-    alert(`SUCCESS ${sentence}`);
+    resultElement.value = sentence;
 };
 
 frm.addEventListener('submit', onSubmit);
 
-const radius = 8;
-const cube = radius ** 3;
-console.log(cube)
 
-const volume = (4 / 3) * Math.PI * (radius ** 3);
+// const task = [
+//     'Buy milk',
+//     'Fetch the kids'
+// ];
 
-console.log(volume)
-console.log(Math.PI, (22 / 7))
+let idCounter = 0;
+
+const tasks = [
+];
+
+const addTask = text => {
+
+    idCounter += 1;
+
+    tasks.push({
+        text,
+        id: `${Date.now()}-${idCounter}`,
+        done: false
+    });
+};
+
+addTask();

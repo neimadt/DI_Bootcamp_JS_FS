@@ -1,0 +1,14 @@
+.banner {
+    height: 60px;
+    background-color: purple;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}

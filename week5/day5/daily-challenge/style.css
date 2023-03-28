@@ -1,0 +1,120 @@
+:root {
+    --redish: #eb3838;
+    --darkish: #272727;
+}
+
+body {
+    background-color: var(--redish);
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.card>h1 {
+    color: white;
+    text-align: center;
+}
+
+.card {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+form>input {
+    flex-grow: 1;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--darkish);
+}
+
+form>button {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #216de0;
+}
+
+.error {
+    border: 2px solid white;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding: 2px 5px;
+}
+
+.error>svg {
+    height: 100%;
+    width: auto;
+    color: white;
+    margin-right: 5px;
+}
+
+.error>.error-text {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.card>.list-tasks {
+    background-color: white;
+    min-height: 200px;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 5px 8px;
+}
+
+.card>.list-tasks>li {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-top: 8px;
+}
+
+.card>.list-tasks>li:first-of-type {
+    margin-top: 0;
+}
+
+.card>.list-tasks>li>.text {
+    flex-grow: 1;
+    color: var(--darkish);
+    padding: 0 8px;
+}
+
+.card>.list-tasks>li>.text.done {
+    text-decoration: line-through;
+    color: var(--redish);
+}
+
+.card>.list-tasks>li>button {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    outline: transparent;
+    border: none;
+    background-color: var(--redish);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}

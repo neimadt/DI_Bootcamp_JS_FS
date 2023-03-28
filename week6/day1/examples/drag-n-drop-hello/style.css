@@ -1,0 +1,14 @@
+div {
+    overflow: hidden;
+    text-align: center;
+    font-size: 40px;
+}
+
+#box {
+    padding: 20px;
+    display: inline-block;
+}
+
+/* .draggable {
+    position:absolute;
+  } */

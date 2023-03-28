@@ -22,37 +22,50 @@
     <h1>Mad Libs</h1>
 
     <form id="libform">
-        <label for="noun">Noun:</label>
-        <input type="text" id="noun" name="noun">
-        <span class="alert alert-noun hidden">A noun is required</span>
-        <br>
-        <label for="adjective">Adjective:</label>
-        <input type="text" id="adjective" name="adjective">
-        <span class="alert alert-adjective hidden">An adjective is required</span>
-        <br>
-        <label for="person">Someone's Name:</label>
-        <input type="text" id="person" name="person">
-        <br>
-        <label for="verb">Verb:</label>
-        <input type="text" id="verb" name="verb">
-        <br>
-        <label for="place">A place:</label>
-        <input type="text" id="place" name="place">
-        <br>
+        <div class="form-control">
+            <label for="noun">Noun:</label>
+            <input type="text" id="noun" name="noun" placeholder="Enter a noun">
+            <span class="alert alert-noun hidden">A noun is required</span>
+        </div>
+        <div class="form-control">
+            <label for="noun">Adjective:</label>
+            <input type="text" name="adjective">
+            <span class="alert alert-adjective hidden">An Adjective is required</span>
+        </div>
+        <div class="form-control">
+            <label for="noun">Someone's Name:</label>
+            <input type="text" id="noun" name="person">
+            <span class="alert alert-person hidden">Someone's Name is required</span>
+        </div>
+        <div class="form-control">
+            <label for="noun">Verb:</label>
+            <input type="text" name="verb">
+            <span class="alert alert-verb hidden">A Verb is required</span>
+        </div>
+        <div class="form-control">
+            <label for="noun">A place:</label>
+            <input type="text" name="place">
+            <span class="alert alert-place hidden">A place is required</span>
+        </div>
+
         <button id="lib-button" type="submit">Lib it!</button>
         <button id="lib-shuffle" type="submit">Shuffle!</button>
     </form>
 
-    <p>Generated story:
+    <br />
+    <br />
+    <div>
+        <label>Generated story:</label>
+        <br />
+        <textarea id="story" style="width: 300px; height: 200px;" readonly></textarea>
+    </div>
+
+    <!-- <p>
+        Generated story:
         <span id="story">
 
         </span>
-    </p>
-
-    <p><strong>Hello</strong> I hope you are enjoying <strong>this</strong> class. At the
-        <strong>end</strong> you <strong>will</strong> be great Developers!
-        <strong>Enjoy</strong> the <strong>JavaScript </strong> lessons
-    </p>
+    </p> -->
 
     <script src="./main.js"></script>
 

@@ -1,0 +1,47 @@
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*---- BOX ----*/
+#box {
+    margin: auto;
+    width: 30%;
+    height: 300px;
+    border: 2px solid blue;
+    padding: 2px;
+}
+
+#square1,
+#square2,
+#square3 {
+    float: left;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+#square1 {
+    width: 50px;
+    height: 30px;
+    background-color: #BEA7CC;
+}
+
+#square2 {
+    width: 70px;
+    height: 50px;
+    background-color: #B5D5F5;
+}
+
+#square3 {
+    width: 250px;
+    height: 120px;
+    background-color: #F5B5C5;
+}
+
+/* -- ONDRAGENTER-- ONDRAGLEAVE */
+
+.over {
+    border: 2px dashed #000;
+}

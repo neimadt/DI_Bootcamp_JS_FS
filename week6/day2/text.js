@@ -1,3 +1,3 @@
 // comment
 
-console.log('All good in the main branch')
+console.log('All good in all branches')

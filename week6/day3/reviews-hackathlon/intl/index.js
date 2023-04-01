@@ -1,0 +1,1 @@
+console.log(new Intl.NumberFormat({ minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(100000));

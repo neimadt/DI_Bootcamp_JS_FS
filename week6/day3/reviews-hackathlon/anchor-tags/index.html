@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+
+    <style>
+        @media print {
+
+            .no-print,
+            .no-print * {
+                display: none !important;
+            }
+        }
+
+        /* Hide title and print date on top of document */
+        @page {
+            size: auto;
+            margin: 0mm;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a target="_blank" href="https://google.com">Go to Google</a>
+    <br />
+    <a href="mailto:email@example.com">Send Email email@example.com</a>
+    <br />
+    <a href="tel:+23052525252">Call me</a>
+    <br />
+    <a target="_blank" href=" https://wa.me/23052525252">Whatsapp me</a>
+
+    <br />
+    <button id="btnPrint" class="no-print">Print</button>
+
+    <br />
+    <br />
+    <form>
+        <textarea name="feedback" style="resize: none; height: 100px;" maxlength="100"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src='main.js'></script>
+</body>
+
+</html>

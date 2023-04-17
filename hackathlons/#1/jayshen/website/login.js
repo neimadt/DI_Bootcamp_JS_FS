@@ -12,15 +12,13 @@ const users = [
     },
 
 
-    ];
+];
 
-    const email = document.getElementById('email')
-    const password = document.getElementById('password')
-    const buttonSubmit = document.getElementById('formButton')
+const email = document.getElementById('email')
+const password = document.getElementById('password')
+const buttonSubmit = document.querySelector('.formButton')
 
 
-    buttonSubmit.addEventListener('click', () => {
-        window.location.assign("test.html")
-      
-    
-    });
+buttonSubmit.addEventListener('click', () => {
+    window.location.assign("test.html")
+});

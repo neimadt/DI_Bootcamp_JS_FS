@@ -3,14 +3,14 @@ const arr = [1, 4, 9, 16];
 
 const result = [];
 
-const reducer = (passedValue, n, i) => {
+const reducer = (acc, n) => {
 
     if (n % 2 === 0) {
 
-        passedValue.push(n);
+        acc.push(n);
     }
 
-    return passedValue;
+    return acc;
 };
 
 const evens = arr.reduce(reducer, result);
@@ -28,9 +28,9 @@ for (const n of arr) {
 console.log(sum)
 
 
-const total = arr.reduce((t, n) => {
+const total = arr.reduce((acc, n) => {
 
-    const newT = t + n;
+    const newT = acc + n;
 
     return newT;
 }, 0);
@@ -44,9 +44,13 @@ let count = arr.reduce((acc, val) => {
     return acc + val;
 });
 
+let countOneLiner = arr.reduce((acc, val) => acc + val, 0);
+
+
 
 console.log(total)
 console.log(count)
+console.log(countOneLiner)
 
 const totalOfEvens = arr.reduce((t, n) => {
 

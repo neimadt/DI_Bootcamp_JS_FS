@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --bg-color: #6556cd;
+    --nav-bg-color: #6adf82;
+    --nav-search-bg-color: #c8d6e5;
+    --card-bg-color: #4fc1c5;
+    --card-img-bg-color: #303952;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: url(./images/circuit-pattern.png);
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    padding-top: 110px;
+}
+
+@media (min-width: 480px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    background-color: var(--nav-bg-color);
+    background-image: url(./images/circuit-pattern.png);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 480px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+        height: 56px;
+    }
+}
+
+nav label {
+    background-color: var(--nav-bg-color);
+    color: var(--card-img-bg-color);
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 540px) {
+    nav label {
+        font-size: 2rem;
+    }
+}
+
+nav input {
+    background-color: var(--nav-search-bg-color);
+    color: var(--card-img-bg-color);
+    outline: none;
+    font-size: 1.1rem;
+    flex-grow: 1;
+    height: 55px;
+    margin: 8px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 99px;
+    padding: 0 10px;
+    transition: box-shadow ease-in-out 200ms;
+    max-width: 450px;
+}
+
+nav input:focus {
+    box-shadow: 0 0 0 1px var(--nav-bg-color), 0 0 0 3px var(--card-img-bg-color);
+}
+
+@media (min-width: 480px) {
+    nav input {
+        height: 60%;
+        margin: 0 20px 0 10px;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: auto;
+    max-width: 800px;
+    width: calc(100% - 30px);
+    margin: 20px auto 0 auto;
+    padding-bottom: 20px;
+    row-gap: 20px;
+    column-gap: 15px;
+}
+
+@media (min-width: 480px) {
+    .cards {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (min-width: 710px) {
+    .cards {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+
+.card {
+    background-color: var(--card-bg-color);
+    background-image: url(./images/card-pattern.png);
+    background-repeat: repeat;
+    background-size: 150px 150px;
+    height: 250px;
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 5px;
+}
+
+.card img {
+    width: calc(100% - 10px);
+    height: auto;
+    background-color: var(--card-img-bg-color);
+    border-radius: 50%;
+}
+
+.card .text {
+    margin-top: 5px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card .text.text-name {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.card .text.text-email {
+    text-transform: lowercase;
+    font-size: 0.85rem;
+}

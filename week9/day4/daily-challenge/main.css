@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+    position: relative;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    padding: 3rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+form button[type="submit"] {
+    display: flex;
+    align-items: center;
+    background-color: #b9d6d6;
+    border: 1px solid #899a9a;
+    outline: none;
+    padding: 0.5rem 0.75rem;
+}
+
+form button[type="submit"] svg {
+    display: none;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    height: 15rem;
+    margin: 0 1rem 1.5rem 1rem;
+}
+
+.row .img-container {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.row .img-container img {
+    height: 100%;
+    width: auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.row button {
+    height: 3rem;
+    width: 3rem;
+    background-color: red;
+    color: white;
+    border: 2px solid #a10000;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+}

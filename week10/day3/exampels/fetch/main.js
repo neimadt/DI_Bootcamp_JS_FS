@@ -1,8 +1,10 @@
-const fetchSunRise = async (endpoint) => {
+const fetchSunRise = async (lat, lng) => {
 
     try {
 
-        const response = await fetch(endpoint);
+        const url = `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`;
+
+        const response = await fetch(url);
         console.log("response", response);
 
         if (!response.ok) throw new Error("Something went wrong");
@@ -11,17 +13,37 @@ const fetchSunRise = async (endpoint) => {
         let data = await response.json();
         console.log("data", data);
         // let sunrise = data.results.sunrise;
-        const { results: { sunrise } } = data;
+        const { status, results: { sunrise } } = data;
 
-        const p = document.createElement('p');
-        p.innerHTML = `<b>The hour of the sunrise in Tel Aviv is: ${sunrise}</b>`;
+        if (status === 'OK') {
 
-        document.body.appendChild(p);
+            return sunrise;
+        }
+        else {
+
+            throw new Error("Invalid data from API");
+        }
     }
     catch (err) {
 
         console.log(err);
     }
-}
+};
 
-fetchSunRise("https://api.sunrise-sunset.org/json?lat=32.0853&lng=34.7818");
+(async () => {
+
+    const start = Date.now();
+
+    // const city1 = await fetchSunRise(48.864716, 2.349014);
+    // const city2 = await fetchSunRise(40.730610, -73.935242);
+
+
+    const [city1, city2] = await Promise.all([
+        fetchSunRise(48.864716, 2.349014),
+        fetchSunRise(40.730610, -73.935242)
+    ]);
+
+    const end = Date.now();
+
+    alert(`${city1} & ${city2} Duration: ${end - start}`);
+})()

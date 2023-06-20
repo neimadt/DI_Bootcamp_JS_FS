@@ -1,0 +1,28 @@
+<section style="padding: 5px 20px 15px 20px;">
+    <% for (const post of posts) { %>
+
+        <div style="margin-bottom: 40px;">
+            <h3>
+                <%=post.title%>
+            </h3>
+            <h5>Creator: <%=post.creator%>
+            </h5>
+            <h6>
+                Category:
+                <% for (const catg of post.categories) { %>
+                    <span>
+                        <%=catg%>
+                    </span>
+                    <% } %>
+            </h6>
+            <h6>
+                Publication Date: <%=new Date(post.isoDate)%>
+            </h6>
+            <div>
+                <%-post.content%>
+            </div>
+            <a target="_blank" href="<%=post.link%>">Source</a>
+        </div>
+
+        <% } %>
+</section>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%> | Mau-Pizzas
+    </title>
+</head>
+
+<body>
+    <h1>Welcome to <%=title%>. We serve the best pizzas :) </h1>
+
+    <% if (menu.length> 0) { %>
+        <ul>
+            <% for(let pizza of menu) { %>
+                <li>Name: <%=pizza.name%>
+                </li>
+                <li>Price: <%=pizza.price%>$</li>
+                <li>
+                    <% for(let ig of pizza.ingredients) { %>
+                        <span>
+                            <b>#</b>
+                            <%=ig%>&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <% } %>
+                </li>
+                </br>
+                </br>
+                <% } %>
+        </ul>
+        <% } else { %>
+            <h4>We are currently not serving any pizza</h4>
+            <% } %>
+</body>
+
+</html>

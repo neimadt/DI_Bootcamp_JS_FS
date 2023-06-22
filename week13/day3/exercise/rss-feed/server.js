@@ -30,13 +30,13 @@ app.use(express.json());
 
 app.set('view engine', 'ejs');
 
+
 app.get('/', async (req, res) => {
 
     const feed = await parser.parseURL(RSS_FEED_BASE_URL);
 
     res.render('index', { posts: feed.items });
 });
-
 
 
 const servePosts = async ({ res, title, category }) => {

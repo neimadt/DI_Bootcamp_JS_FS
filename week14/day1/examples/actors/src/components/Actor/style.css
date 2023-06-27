@@ -1,0 +1,12 @@
+.actor-title {
+    color: purple;
+}
+
+.actor h3 {
+    font-style: italic;
+}
+
+.actor img {
+    height: 50px;
+    width: auto;
+}

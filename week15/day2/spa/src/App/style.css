@@ -1,0 +1,9 @@
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .route-container {
+    flex-grow: 1;
+}

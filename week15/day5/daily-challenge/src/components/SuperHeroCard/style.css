@@ -1,0 +1,21 @@
+.superhero-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 250px;
+}
+
+.superhero-card:first-of-type {
+    margin-top: 0;
+}
+
+.superhero-card>.img-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.superhero-card img {
+    height: 200px;
+    width: auto !important;
+}

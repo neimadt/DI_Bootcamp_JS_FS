@@ -6,15 +6,15 @@ const data = [
     },
     {
         type: 'Lightnings',
-        value: 3000
+        value: 6540
     },
     {
         type: 'Shakas',
-        value: 3000
+        value: 337010
     },
     {
         type: 'Diamonds',
-        value: 3000
+        value: 98661
     }
 ];
 

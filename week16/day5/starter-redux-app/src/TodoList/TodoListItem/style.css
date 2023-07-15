@@ -1,0 +1,9 @@
+.todo-list-item {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.todo-list-item:focus {
+    outline: none;
+}

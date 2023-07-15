@@ -1,7 +1,8 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 import { dayForward as dayForwardReducer, dayBackward as dayBackwardReducer } from '../reducers';
 
-const initialState = { weekday: 'Monday' }
+
+const initialState = { weekday: 'Monday' };
 
 const slice = createSlice({
     name: 'WeekDays',
